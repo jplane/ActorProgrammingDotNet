@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OrleansConfiguration xmlns="urn:orleans">
+  <Globals>
+    <SeedNode Address="localhost" Port="11111" />
+    <StorageProviders>
+      <Provider Type="Orleans.Storage.MemoryStorage"
+                Name="VolatileStore"
+                NumStorageGrains="10" />
+    </StorageProviders>
+  </Globals>
+  <Defaults>
+    <Tracing DefaultTraceLevel="Error" TraceToConsole="true" />
+    <Networking Address="localhost" Port="11111" />
+    <ProxyingGateway Address="localhost" Port="30000" />
+  </Defaults>
+</OrleansConfiguration>
